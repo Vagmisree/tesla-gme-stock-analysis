@@ -1,0 +1,11 @@
+import yfinance as yf
+
+# Extract GME stock data
+gme = yf.Ticker("GME")
+gme_data = gme.history(period="max")
+
+# Reset index
+gme_data.reset_index(inplace=True)
+
+# Display first five rows
+gme_data.head()
